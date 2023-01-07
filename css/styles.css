@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitoregular.woff");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitobold.woff");
+    font-weight: bold;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #F7F7F7;
+    flex-shrink: 0;
+    position: relative;
+    border-right: 1px solid #E2E2E2;
+}
+
+.logo {
+    padding: 25px 0;
+    text-align: center;
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+
+.menu-item a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 16px 15px;
+    margin: 0 17px;
+}
+
+.menu-item a span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+    margin-left: 10px;
+}
+
+.menu-item a:hover,
+.menu-item.active a {
+    background: #467DF2;
+    border-radius: 5px;
+}
+
+.menu-item a:hover span,
+.menu-item.active a span {
+    color: #FFFFFF;
+}
+
+.menu-item a:hover path,
+.menu-item.active a path {
+    fill: #FFFFFF;
+}
+
+.feedback {
+    position: fixed;
+    width: 216px;
+    padding: 13px 12px;
+    left: 17px;
+    bottom: 17px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.feedback-image {
+    margin-right: 6px;
+    margin-bottom: 7px;
+    float: left;
+}
+
+.feedback-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #4F4E4F;
+}
+
+.feedback-text-link {
+    text-decoration: none;
+    color: #0042EB;
+}
+
+.feedback:hover {
+    border: 1px solid #467DF2;
+    border-radius: 5px;
+}
+
+.content {
+    position: relative;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+    background: #F7F7F7;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: relative;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.header-menu {
+    display: flex;
+}
+
+.header-menu-items {
+    display: flex;
+    margin-left: 20px;
+}
+
+.header-menu-item a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+}
+
+.header-menu-item.tasks svg {
+    margin-left: 5px;
+}
+
+.header-menu-item.tasks:hover path {
+    fill: #3D63D2;
+}
+
+
+.header-menu-items a:hover {
+    color:  #3D63D2;
+}
+
+.tasks-selection {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.15);
+    border-radius: 10px;
+    width: 150px;
+    padding: 30px 30px 30px 0;
+    top: 45px;
+    left: 221px;
+}
+
+.header-menu-item.tasks:hover .tasks-selection {
+    display: block;
+}
+
+.tasks-selection a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 19px;
+    color: #686464;
+}
+
+.tasks-selection a:hover {
+    color:  #3D63D2;
+}
+
+.tasks-selection-item.tasks-selection-yesterday {
+    margin-top: 15px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    background: url("../images/search.png") no-repeat 20px 10px;
+    padding: 10px 44px 11px 44px;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search::placeholder {
+    font-size: 14px;
+    line-height: 19px;
+    color: #B3B3B3;
+}
+
+.statistic {
+    margin-left: 40px;
+}
+
+.statistic:hover path {
+    fill: #467DF2;
+    cursor: pointer;
+}
+
+.button {
+    background: #467DF2;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.button.button-upload {
+    padding: 11px 18px 10px 18px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.button.button-upload:hover {
+    background: #2F54A3;
+}
+
+.container {
+    max-width: 1670px;
+    padding: 25px 40px 53px;
+    background: #E5E5E5;
+}
+
+.container-items {
+    display: flex;
+    align-items: center;
+}
+
+.container h1 {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 48px;
+    color: #4F4E4F;
+    margin-bottom: 40px;
+}
+
+.dashboard-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dashboard-item {
+    margin-bottom: 40px;
+    width: 345px;
+    height: 367px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.dashboard-item:hover {
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.5);
+}
+
+.dashboard-item-image {
+    position: center;
+    width: 345px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.dashboard-item-image.fleet1 {
+    background-image: url("../images/fleet1.png");
+}
+
+.dashboard-item-image.fleet2 {
+    background-image: url("../images/fleet2.png");
+}
+
+.dashboard-item-image.fleet3 {
+    background-image: url("../images/fleet3.png");
+}
+
+.dashboard-item-image.fleet4 {
+    background-image: url("../images/fleet4.png");
+}
+
+.dashboard-item-image.fleet5 {
+    background-image: url("../images/fleet5.png");
+}
+
+.dashboard-item-image.fleet6 {
+    background-image: url("../images/fleet6.png");
+}
+
+.dashboard-item-image.fleet7 {
+    background-image: url("../images/fleet7.png");
+}
+
+.dashboard-item-image.fleet8 {
+    background-image: url("../images/fleet8.png");
+}
+
+.dashboard-item-content {
+    padding: 20px 26px 21px 26px;
+}
+
+.dashboard-item-name a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #4F4E4F;
+    margin-bottom: 8px;
+}
+
+.dashboard-item-name a:hover {
+    color: #467DF2;
+}
+
+.dashboard-viewing-time {
+    font-size: 15px;
+    line-height: 30px;
+    color: #4F4E4F;
+    margin-bottom: 18px;
+}
+
+.dashboard-active {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-active-button:hover path,
+.dashboard-active-button:hover ellipse
+{
+    fill: #467DF2;
+    cursor: pointer;
+}
+
+.button.button-support {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: rotate(-90deg);
+    height: 39px;
+    padding: 020px;
+    border-radius: 10px 10px 0 0;
+    right: -70px;
+    top: 327px;
+}
+
+.button-image {
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
+
+.button.button-support:hover {
+    height: 49px;
+    background: #2F54A3;
+}
